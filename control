@@ -1,0 +1,9 @@
+Package: com.rango.gasolina
+Name: Gasolina
+Depends: mobilesubstrate
+Version: 0.1
+Architecture: iphoneos-arm
+Description: Saves you some battery!
+Maintainer: Rango
+Author: Rango
+Section: Tweaks
