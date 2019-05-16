@@ -1,3 +1,5 @@
+ARCHS = armv7 arm64
+
 include $(THEOS)/makefiles/common.mk
 
 BUNDLE_NAME = GasolinaPrefs
@@ -5,6 +7,7 @@ GasolinaPrefs_FILES = GLARootListController.m
 GasolinaPrefs_INSTALL_PATH = /Library/PreferenceBundles
 GasolinaPrefs_FRAMEWORKS = UIKit
 GasolinaPrefs_PRIVATE_FRAMEWORKS = Preferences
+GasolinaPrefs_EXTRA_FRAMEWORKS = Cephei CepheiPrefs
 
 include $(THEOS_MAKE_PATH)/bundle.mk
 
