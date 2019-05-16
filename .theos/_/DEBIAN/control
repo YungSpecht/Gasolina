@@ -6,5 +6,7 @@ Description: Saves you some battery!
 Maintainer: Rango
 Author: Rango
 Section: Tweaks
-Version: 0.1-1+debug
-Installed-Size: 156
+Depiction: https://yungspecht.github.io/depictions/?p=com.rango.gasolina
+SileoDepiction: https://yungspecht.github.io/sileodepictions/com.rango.gasolina/depiction.json
+Version: 0.2-2+debug
+Installed-Size: 296
