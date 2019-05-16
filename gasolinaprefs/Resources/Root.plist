@@ -22,8 +22,51 @@
 			<key>label</key>
 			<string>Enabled</string>
 		</dict>
+		<dict>
+		    <key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>Custom Settings</string>
+		</dict>
+     	<dict>
+		    <key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<true/>
+			<key>defaults</key>
+			<string>com.rango.gasolinaprefs</string>
+			<key>key</key>
+			<string> No LPM AutoLock</string>
+			<key>label</key>
+			<string>No LPM AutoLock</string>
+		</dict>	
+		<dict>
+		    <key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<true/>
+			<key>defaults</key>
+			<string>com.rango.gasolinaprefs</string>
+			<key>key</key>
+			<string>No Background Refresh</string>
+			<key>label</key>
+			<string>No Background Refresh</string>
+		</dict>	
+		<dict>
+		    <key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<true/>
+			<key>defaults</key>
+			<string>com.rango.gasolinaprefs</string>
+			<key>key</key>
+			<string>No Automatic App Launching</string>
+			<key>label</key>
+			<string>No Automatic App Launching</string>
+		</dict>	
+			
 	</array>
 	<key>title</key>
-	<string>GasolinaPrefs</string>
+	<string>Gasolina</string>
 </dict>
 </plist>
