@@ -1,9 +1,3 @@
-%hook SBIdleTimerDescriptorFactory
-- (bool)updateIdleTimerSettingsForBatterySaverMode:(id)arg1 {
-    return NO;
-} 
-%end
-
 %hook SpringBoard
 - (bool)isBatterySaverModeActive {
     return YES;
@@ -15,6 +9,13 @@
 - (bool)underMemoryPressure {
     return NO;
 }
+%end
+
+//Disabling LPM Autolock
+%hook SBIdleTimerDescriptorFactory
+- (bool)updateIdleTimerSettingsForBatterySaverMode:(id)arg1 {
+    return NO;
+} 
 %end
 
 %hook SBThermalController
@@ -29,6 +30,7 @@
 } 
 %end
 
+//Disabling/Enabling Background App Refresh
 %hook SBApplicationInfo
 - (bool)supportsBackgroundAppRefresh {
     return NO;
@@ -53,6 +55,7 @@
 } 
 %end
 
+//Disabling Automatic Application Launching
 %hook SBApplicationAutoLaunchService
 - (bool)_shouldAutoLaunchApplication:(id)arg1 forReason:(unsigned long long)arg2 {
     return NO;
