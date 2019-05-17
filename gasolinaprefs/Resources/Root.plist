@@ -134,7 +134,7 @@
 			<key>cell</key>
 			<string>PSGroupCell</string>
 			<key>label</key>
-			<string>Credits</string>
+			<string>Thanks for helping with Preferences:</string>
 		</dict>
 		 <dict>
             <key>action</key>
@@ -149,8 +149,6 @@
             <string>EsquilliDev</string>
             <key>user</key>
             <string>EsquilliDev</string>
-			<key>footerText</key>
-            <string>Helping with Preferences</string>
         </dict>
 	<key>title</key>
 	<string>Gasolina</string>
