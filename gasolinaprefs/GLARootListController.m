@@ -45,7 +45,7 @@
 }
 
 -(IBAction)twitterRango {
-    NSURL *URL = [NSURL URLWithString: @"https://twitter.com/Yung_Specht"];
+    NSURL *URL = [NSURL URLWithString: @"https://twitter.com/yung_specht"];
     [[UIApplication sharedApplication] openURL:URL options:@{} completionHandler:nil];
 }
 
