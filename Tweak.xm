@@ -9,6 +9,8 @@ BOOL noAutoLock = YES;
 BOOL noBackgroundRefresh = YES;
 BOOL noAutoAppLaunch = YES;
 
+%group Gasolina
+
 %hook SpringBoard
 - (bool)isBatterySaverModeActive {
     return YES;
@@ -100,6 +102,8 @@ BOOL noAutoAppLaunch = YES;
 } 
 %end
 
+%end // Gasolina group
+
 %ctor {
     pfs = [[HBPreferences alloc] initWithIdentifier:@"com.rango.gasolinaprefs"];
 
@@ -110,4 +114,8 @@ BOOL noAutoAppLaunch = YES;
     [pfs registerBool:&noAutoLock default:YES forKey:@"NoLPMAutoLock"];
     [pfs registerBool:&noBackgroundRefresh default:YES forKey:@"NoBackgroundRefresh"];
     [pfs registerBool:&noAutoAppLaunch default:YES forKey:@"NoAutomaticAppLaunching"];
+
+    if (!enabled) return;
+
+    %init(Gasolina);
 }
