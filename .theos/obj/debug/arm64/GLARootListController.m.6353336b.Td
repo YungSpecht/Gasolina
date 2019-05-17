@@ -7,6 +7,8 @@
   GLARootListController.h \
   /home/resorte/theos/vendor/include/Preferences/PSListController.h \
   /home/resorte/theos/vendor/include/Preferences/PSViewController.h \
+  /home/resorte/theos/vendor/include/Preferences/PSSpecifier.h \
+  /home/resorte/theos/vendor/include/Preferences/PSTableCell.h \
   /home/resorte/theos/vendor/lib/CepheiPrefs.framework/Headers/HBRootListController.h \
   /home/resorte/theos/vendor/lib/CepheiPrefs.framework/Headers/HBListController.h \
   /home/resorte/theos/vendor/lib/CepheiPrefs.framework/Headers/PSListController+HBTintAdditions.h \
@@ -28,6 +30,10 @@ GLARootListController.h:
 /home/resorte/theos/vendor/include/Preferences/PSListController.h:
 
 /home/resorte/theos/vendor/include/Preferences/PSViewController.h:
+
+/home/resorte/theos/vendor/include/Preferences/PSSpecifier.h:
+
+/home/resorte/theos/vendor/include/Preferences/PSTableCell.h:
 
 /home/resorte/theos/vendor/lib/CepheiPrefs.framework/Headers/HBRootListController.h:
 

@@ -4,7 +4,7 @@
 <dict>
 	<key>items</key>
 	<array>
-	  <dict>
+	 	<dict>
 			<key>cell</key>
 			<string>PSGroupCell</string>
 			<key>headerCellClass</key>
@@ -12,14 +12,22 @@
 			<key>icon</key>
 			<string>banner.png</string>
 		</dict>
-             <dict>
-                   <key>cellClass</key>
-                   <string>HBTwitterCell</string>
-                   <key>label</key>
-                   <string>Rango</string>
-                   <key>user</key>
-                   <string>YungSpecht</string>
-             </dict>
+	    <dict>
+            <key>action</key>
+            <string>twitterRango</string>
+            <key>cell</key>
+            <string>PSButtonCell</string>
+            <key>label</key>
+            <string>@YungSpecht</string>
+            <key>cellClass</key>
+            <string>HBTwitterCell</string>
+            <key>label</key>
+            <string>YungSpecht</string>
+            <key>user</key>
+            <string>YungSpecht</string>
+        </dict>
+
+	    <!-- Gasolina Preferences -->
         <dict>
 			<key>cell</key>
 			<string>PSGroupCell</string>
@@ -40,6 +48,8 @@
 			<key>PostNotification</key>
 			<string>com.rango.gasolinaprefs/ReloadPrefs</string>
 		</dict>
+
+		<!-- Custom Settings -->
 		<dict>
 		    <key>cell</key>
 			<string>PSGroupCell</string>
@@ -88,7 +98,22 @@
 			<key>PostNotification</key>
 			<string>com.rango.gasolinaprefs/ReloadPrefs</string>
 		</dict>	
-			
+
+		<!-- Miscellaneous -->
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>Miscellaneous</string>
+		</dict>
+		<dict>
+			<key>action</key>
+			<string>respring</string>
+			<key>cell</key>
+			<string>PSButtonCell</string>
+			<key>label</key>
+			<string>Respring</string>
+		</dict>
 	</array>
 	<key>title</key>
 	<string>Gasolina</string>
