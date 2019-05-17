@@ -32,7 +32,7 @@
 			<key>cell</key>
 			<string>PSGroupCell</string>
 			<key>label</key>
-			<string>Gasolina Preferences</string>
+			<string>General</string>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -97,7 +97,21 @@
 			<string>No Automatic App Launching</string>
 			<key>PostNotification</key>
 			<string>com.rango.gasolinaprefs/ReloadPrefs</string>
-		</dict>	
+		</dict>
+        <dict>
+		    <key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<true/>
+			<key>defaults</key>
+			<string>com.rango.gasolinaprefs</string>
+			<key>key</key>
+			<string>NoBackgroundNetworkUsage</string>
+			<key>label</key>
+			<string>No Background Network Usage</string>
+			<key>PostNotification</key>
+			<string>com.rango.gasolinaprefs/ReloadPrefs</string>
+		</dict>		
 
 		<!-- Miscellaneous -->
 		<dict>

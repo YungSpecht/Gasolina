@@ -8,6 +8,7 @@ BOOL enabled = YES;
 BOOL noAutoLock = YES;
 BOOL noBackgroundRefresh = YES;
 BOOL noAutoAppLaunch = YES;
+BOOL noBackgroundNetwork = YES;
 
 %group Gasolina
 
@@ -24,7 +25,7 @@ BOOL noAutoAppLaunch = YES;
 }
 %end
 
-//Disabling LPM Autolock
+//Enable/Disabling LPM Autolock
 %hook SBIdleTimerDescriptorFactory
 - (bool)updateIdleTimerSettingsForBatterySaverMode:(id)arg1 {
     if(noAutoLock)
@@ -46,7 +47,7 @@ BOOL noAutoAppLaunch = YES;
 } 
 %end
 
-//Disabling/Enabling Background App Refresh
+//Enabling/Disabling Background App Refresh
 %hook SBApplicationInfo
 - (bool)supportsBackgroundAppRefresh {
     if(noBackgroundRefresh)
@@ -77,23 +78,29 @@ BOOL noAutoAppLaunch = YES;
 } 
 %end
 
-//Disabling Automatic Application Launching
+//Enabling/Disabling Automatic Application Launching
 %hook SBApplicationAutoLaunchService
 - (bool)_shouldAutoLaunchApplication:(id)arg1 forReason:(unsigned long long)arg2 {
     if(noAutoAppLaunch)
     	return NO;
     else
-		return %orig(arg2);
+		return %orig(arg1, arg2);
 } 
 %end
 
+//Enabling/Disabling Background Network Usage
 %hook SBApplication
 - (void)setUsesBackgroundNetwork:(bool)arg1 {
-    arg1 = NO;
+    if(noBackgroundNetwork)
+	arg1 = NO;
+    else %orig(arg1);
     %orig;
 } 
 - (bool)usesBackgroundNetwork {
-    return NO;
+	if(noBackgroundNetwork)
+		return NO;
+	else
+		return %orig;
 } 
 %end
 
@@ -126,6 +133,7 @@ BOOL noAutoAppLaunch = YES;
     [pfs registerBool:&noAutoLock default:YES forKey:@"NoLPMAutoLock"];
     [pfs registerBool:&noBackgroundRefresh default:YES forKey:@"NoBackgroundRefresh"];
     [pfs registerBool:&noAutoAppLaunch default:YES forKey:@"NoAutomaticAppLaunching"];
+	[pfs registerBool:&noBackgroundNetwork default:YES forKey:@"NoBackgroundNetworkUsage"];
 
     if (!enabled) return;
 
