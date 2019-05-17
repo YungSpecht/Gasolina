@@ -5,7 +5,14 @@
   /var/theos/include/CoreFoundation/CFLogUtilities.h \
   GLARootListController.h \
   /var/theos/include/Preferences/PSListController.h \
-  /var/theos/include/Preferences/PSViewController.h
+  /var/theos/include/Preferences/PSViewController.h \
+  /var/theos/include/Preferences/PSSpecifier.h \
+  /var/theos/include/Preferences/PSTableCell.h \
+  /var/theos/vendor/lib/CepheiPrefs.framework/Headers/HBRootListController.h \
+  /var/theos/vendor/lib/CepheiPrefs.framework/Headers/HBListController.h \
+  /var/theos/vendor/lib/CepheiPrefs.framework/Headers/PSListController+HBTintAdditions.h \
+  /var/theos/vendor/lib/CepheiPrefs.framework/Headers/HBAppearanceSettings.h \
+  /var/theos/vendor/lib/Cephei.framework/Headers/HBPreferences.h
 
 /var/theos/Prefix.pch:
 
@@ -22,3 +29,17 @@ GLARootListController.h:
 /var/theos/include/Preferences/PSListController.h:
 
 /var/theos/include/Preferences/PSViewController.h:
+
+/var/theos/include/Preferences/PSSpecifier.h:
+
+/var/theos/include/Preferences/PSTableCell.h:
+
+/var/theos/vendor/lib/CepheiPrefs.framework/Headers/HBRootListController.h:
+
+/var/theos/vendor/lib/CepheiPrefs.framework/Headers/HBListController.h:
+
+/var/theos/vendor/lib/CepheiPrefs.framework/Headers/PSListController+HBTintAdditions.h:
+
+/var/theos/vendor/lib/CepheiPrefs.framework/Headers/HBAppearanceSettings.h:
+
+/var/theos/vendor/lib/Cephei.framework/Headers/HBPreferences.h:
