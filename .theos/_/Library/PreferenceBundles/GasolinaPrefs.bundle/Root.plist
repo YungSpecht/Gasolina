@@ -37,6 +37,8 @@
 			<string>Enabled</string>
 			<key>label</key>
 			<string>Enabled</string>
+			<key>PostNotification</key>
+			<string>com.rango.gasolinaprefs/ReloadPrefs</string>
 		</dict>
 		<dict>
 		    <key>cell</key>
@@ -52,9 +54,11 @@
 			<key>defaults</key>
 			<string>com.rango.gasolinaprefs</string>
 			<key>key</key>
-			<string> No LPM AutoLock</string>
+			<string>NoLPMAutoLock</string>
 			<key>label</key>
 			<string>No LPM AutoLock</string>
+			<key>PostNotification</key>
+			<string>com.rango.gasolinaprefs/ReloadPrefs</string>
 		</dict>	
 		<dict>
 		    <key>cell</key>
@@ -64,9 +68,11 @@
 			<key>defaults</key>
 			<string>com.rango.gasolinaprefs</string>
 			<key>key</key>
-			<string>No Background Refresh</string>
+			<string>NoBackgroundRefresh</string>
 			<key>label</key>
 			<string>No Background Refresh</string>
+			<key>PostNotification</key>
+			<string>com.rango.gasolinaprefs/ReloadPrefs</string>
 		</dict>	
 		<dict>
 		    <key>cell</key>
@@ -76,9 +82,11 @@
 			<key>defaults</key>
 			<string>com.rango.gasolinaprefs</string>
 			<key>key</key>
-			<string>No Automatic App Launching</string>
+			<string>NoAutomaticAppLaunching</string>
 			<key>label</key>
 			<string>No Automatic App Launching</string>
+			<key>PostNotification</key>
+			<string>com.rango.gasolinaprefs/ReloadPrefs</string>
 		</dict>	
 			
 	</array>

@@ -1,3 +1,14 @@
+#import <Cephei/HBPreferences.h>
+
+//Utils
+HBPreferences *pfs;
+
+// Settings
+BOOL enabled = YES;
+BOOL noAutoLock = YES;
+BOOL noBackgroundRefresh = YES;
+BOOL noAutoAppLaunch = YES;
+
 %hook SpringBoard
 - (bool)isBatterySaverModeActive {
     return YES;
@@ -88,3 +99,15 @@
     return YES;
 } 
 %end
+
+%ctor {
+    pfs = [[HBPreferences alloc] initWithIdentifier:@"com.esquilli.lisa"];
+
+    // Gasolina Preferences
+    [pfs registerBool:&enabled default:YES forKey:@"Enabled"];
+
+    // Custom Settings
+    [pfs registerBool:&noAutoLock default:YES forKey:@"NoLPMAutoLock"];
+    [pfs registerBool:&noBackgroundRefresh default:YES forKey:@"NoBackgroundRefresh"];
+    [pfs registerBool:&noAutoAppLaunch default:YES forKey:@"NoAutomaticAppLaunching"];
+}
