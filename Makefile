@@ -10,6 +10,6 @@ Gasolina_EXTRA_FRAMEWORKS += Cephei
 include $(THEOS_MAKE_PATH)/tweak.mk
 
 after-install::
-	install.exec "killall -9 com.apple.springboard"
+	install.exec "killall -9 SpringBoard"
 SUBPROJECTS += gasolinaprefs
 include $(THEOS_MAKE_PATH)/aggregate.mk

@@ -101,7 +101,7 @@ BOOL noAutoAppLaunch = YES;
 %end
 
 %ctor {
-    pfs = [[HBPreferences alloc] initWithIdentifier:@"com.esquilli.lisa"];
+    pfs = [[HBPreferences alloc] initWithIdentifier:@"com.rango.gasolinaprefs"];
 
     // Gasolina Preferences
     [pfs registerBool:&enabled default:YES forKey:@"Enabled"];
