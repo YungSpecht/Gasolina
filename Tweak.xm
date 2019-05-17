@@ -27,7 +27,10 @@ BOOL noAutoAppLaunch = YES;
 //Disabling LPM Autolock
 %hook SBIdleTimerDescriptorFactory
 - (bool)updateIdleTimerSettingsForBatterySaverMode:(id)arg1 {
-    return NO;
+    if(noAutoLock)
+	    return NO;
+    else
+        return %orig(arg1);		
 } 
 %end
 
@@ -46,8 +49,14 @@ BOOL noAutoAppLaunch = YES;
 //Disabling/Enabling Background App Refresh
 %hook SBApplicationInfo
 - (bool)supportsBackgroundAppRefresh {
-    return NO;
+    if(noBackgroundRefresh)
+	    return NO;
+    else
+		return %orig;
 } 
+%end
+
+%hook SBApplicationInfo
 - (bool)supportsLegacyVOIPBackgroundMode {
     return NO;
 } 
@@ -71,7 +80,10 @@ BOOL noAutoAppLaunch = YES;
 //Disabling Automatic Application Launching
 %hook SBApplicationAutoLaunchService
 - (bool)_shouldAutoLaunchApplication:(id)arg1 forReason:(unsigned long long)arg2 {
-    return NO;
+    if(noAutoAppLaunch)
+    	return NO;
+    else
+		return %orig(arg2);
 } 
 %end
 
@@ -118,4 +130,5 @@ BOOL noAutoAppLaunch = YES;
     if (!enabled) return;
 
     %init(Gasolina);
+	
 }
