@@ -125,6 +125,20 @@
 			<string>No Background Network Usage</string>
 			<key>PostNotification</key>
 			<string>com.rango.gasolinaprefs/ReloadPrefs</string>
+		</dict>
+        <dict>
+		    <key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<true/>
+			<key>defaults</key>
+			<string>com.rango.gasolinaprefs</string>
+			<key>key</key>
+			<string>spoofLPState</string>
+			<key>label</key>
+			<string>Spoof a Low Power State</string>
+			<key>PostNotification</key>
+			<string>com.rango.gasolinaprefs/ReloadPrefs</string>
 		</dict>		
 
 		<!-- Miscellaneous -->
@@ -143,12 +157,28 @@
 			<string>Respring</string>
 		</dict>
 		
+		<!-- Support Me -->
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>Support Me</string>
+		</dict>
+		<dict>
+				<key>cellClass</key>
+                <string>HBLinkTableCell</string>
+                <key>label</key>
+                <string>PayPal</string>
+                <key>url</key>
+                <string>https://paypal.me/YungSpecht</string>
+        </dict>
+		
 		<!-- Credits -->
 		<dict>
 			<key>cell</key>
 			<string>PSGroupCell</string>
 			<key>label</key>
-			<string>Credits</string>
+			<string>Thank you for helping with Preferences</string>
 		</dict>
 		 <dict>
             <key>action</key>

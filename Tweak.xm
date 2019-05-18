@@ -10,9 +10,11 @@ BOOL noAutoLock = YES;
 BOOL noBackgroundRefresh = YES;
 BOOL noAutoAppLaunch = YES;
 BOOL noBackgroundNetwork = YES;
+BOOL spoofLPState = YES;
 
 %group Gasolina
 
+//ToggleLPM
 %hook SpringBoard
 - (bool)isBatterySaverModeActive {
 	if(ToggleLPM)
@@ -76,15 +78,6 @@ BOOL noBackgroundNetwork = YES;
 } 
 %end
 
-%hook SBBackgroundMultitaskingManager
-- (bool)_launchAppForUpdating:(id)arg1 trigger:(unsigned long long)arg2 pushNotificationUserInfo:(id)arg3 withWatchdoggableCompletion:(id)arg4 {
-    return NO;
-} 
-- (bool)_appIsBeingDebugged:(id)arg1 {
-    return NO;
-} 
-%end
-
 //Enabling/Disabling Automatic Application Launching
 %hook SBApplicationAutoLaunchService
 - (bool)_shouldAutoLaunchApplication:(id)arg1 forReason:(unsigned long long)arg2 {
@@ -111,20 +104,20 @@ BOOL noBackgroundNetwork = YES;
 } 
 %end
 
+//Spoof Low Power State
 %hook BCBatteryDevice
-- (bool)isBatterySaverModeActive {
-    return YES;
-} 
-- (void)setBatterySaverModeActive:(bool)arg1 {
-    arg1 = YES;
-    %orig;
-} 
 - (void)setLowBattery:(bool)arg1 {
-    arg1 = YES;
-    %orig;
+	if(spoofLPState)
+		return arg1 = YES;
+	else 
+		%orig;
+	%orig;
 } 
 - (bool)isLowBattery {
-    return YES;
+	if(spoofLPState)
+        return YES;
+	else 
+		return %orig;
 } 
 %end
 
@@ -142,6 +135,7 @@ BOOL noBackgroundNetwork = YES;
     [pfs registerBool:&noBackgroundRefresh default:YES forKey:@"NoBackgroundRefresh"];
     [pfs registerBool:&noAutoAppLaunch default:YES forKey:@"NoAutomaticAppLaunching"];
 	[pfs registerBool:&noBackgroundNetwork default:YES forKey:@"NoBackgroundNetworkUsage"];
+	[pfs registerBool:&spoofLPState default:YES forKey:@"spoofLPState"];
 
     if (!enabled) return;
 
