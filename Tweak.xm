@@ -108,7 +108,7 @@ BOOL spoofLPState = YES;
 %hook BCBatteryDevice
 - (void)setLowBattery:(bool)arg1 {
 	if(spoofLPState)
-		return arg1 = YES;
+		arg1 = YES;
 	else 
 		%orig;
 	%orig;
