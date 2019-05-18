@@ -12,20 +12,20 @@
 			<key>icon</key>
 			<string>banner.png</string>
 		</dict>
-	    <dict>
+             <dict>
             <key>action</key>
             <string>twitterRango</string>
             <key>cell</key>
             <string>PSButtonCell</string>
             <key>label</key>
-            <string>@YungSpecht</string>
+            <string>@Yung_Specht</string>
             <key>cellClass</key>
             <string>HBTwitterCell</string>
             <key>label</key>
-            <string>YungSpecht</string>
+            <string>Rango</string>
             <key>user</key>
-            <string>YungSpecht</string>
-        </dict>
+            <string>Yung_Specht</string>
+            </dict>
 
 	    <!-- Gasolina Preferences -->
         <dict>
@@ -128,7 +128,29 @@
 			<key>label</key>
 			<string>Respring</string>
 		</dict>
-	</array>
+		
+		<!-- Credits -->
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>Credits</string>
+		</dict>
+		 <dict>
+            <key>action</key>
+            <string>twitterEsquilli</string>
+            <key>cell</key>
+            <string>PSButtonCell</string>
+            <key>label</key>
+            <string>@EsquilliDev</string>
+            <key>cellClass</key>
+            <string>HBTwitterCell</string>
+            <key>label</key>
+            <string>EsquilliDev</string>
+            <key>user</key>
+            <string>EsquilliDev</string>
+        </dict>
+      </array>
 	<key>title</key>
 	<string>Gasolina</string>
 </dict>
