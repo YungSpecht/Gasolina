@@ -49,11 +49,6 @@
     [[UIApplication sharedApplication] openURL:URL options:@{} completionHandler:nil];
 }
 
--(IBAction)paypalRango {
-    NSURL *URL = [NSURL URLWithString: @"https://paypal.me/YungSpecht"];
-    [[UIApplication sharedApplication] openURL:URL options:@{} completionHandler:nil];
-}
-
 -(IBAction)twitterEsquilli {
     NSURL *URL = [NSURL URLWithString: @"https://twitter.com/EsquilliDev"];
     [[UIApplication sharedApplication] openURL:URL options:@{} completionHandler:nil];

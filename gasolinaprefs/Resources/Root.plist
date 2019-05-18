@@ -165,20 +165,16 @@
 			<string>Support</string>
 		</dict>
 		<dict>
-            <key>action</key>
-            <string>paypalRango</string>
-            <key>cell</key>
-            <string>>HBLinkTableCell</string>
+            <key>cellClass</key>
+            <string>HBLinkTableCell</string>
             <key>label</key>
+            <string>Donate to me</string>
+            <key>subtitle</key>
             <string>PayPal</string>
             <key>url</key>
-            <string>https://paypal.me/YungSpecht</string>
-            <key>label</key>
-            <string>Rango</string>
-            <key>user</key>
-            <string>Yung_Specht</string>
+            <string>http://paypal.me/YungSpecht</string>
         </dict>
-		
+
 
 
 		<!-- Credits -->
