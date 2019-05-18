@@ -157,20 +157,20 @@
 			<string>Respring</string>
 		</dict>
 		
-		<!-- Support Me -->
+		<!-- Support -->
 		<dict>
 			<key>cell</key>
 			<string>PSGroupCell</string>
 			<key>label</key>
-			<string>Support Me</string>
+			<string>Support</string>
 		</dict>
-		 <dict>
-            <key>action</key>
-            <string>paypalRango</string>
+		<dict>
             <key>cellClass</key>
             <string>HBLinkTableCell</string>
             <key>label</key>
-            <string>PayPal</string>
+            <string>DONATE_TO_RANGO</string>
+            <key>subtitle</key>
+            <string>SUPPORT_ME</string>
             <key>url</key>
             <string>https://paypal.me/YungSpecht</string>
         </dict>

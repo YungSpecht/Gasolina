@@ -10,5 +10,4 @@
 -(void)respringUtil;
 -(IBAction)twitterRango;
 -(IBAction)twitterEsquilli;
--(IBAction)paypalRango;
 @end
