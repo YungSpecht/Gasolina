@@ -22,7 +22,7 @@ BOOL noBackgroundNetwork = YES;
 } 
 - (void)setBatterySaverModeActive:(bool)arg1 {
 	if(ToggleLPM)
-		return YES;
+		arg1 = YES;
 	else
 		%orig(arg1);
 	%orig;
