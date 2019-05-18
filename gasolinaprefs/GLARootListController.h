@@ -5,8 +5,6 @@
 #import <Cephei/HBPreferences.h>
 #import <spawn.h>
 
-@interface HBLinkTableCell : HBTintedTableCell
-@end
 @interface GLARootListController : PSListController
 -(void)respring;
 -(void)respringUtil;
