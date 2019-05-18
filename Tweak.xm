@@ -5,6 +5,7 @@ HBPreferences *pfs;
 
 // Settings
 BOOL enabled = YES;
+BOOL ToggleLPM = YES;
 BOOL noAutoLock = YES;
 BOOL noBackgroundRefresh = YES;
 BOOL noAutoAppLaunch = YES;
@@ -14,11 +15,17 @@ BOOL noBackgroundNetwork = YES;
 
 %hook SpringBoard
 - (bool)isBatterySaverModeActive {
-    return YES;
+	if(ToggleLPM)
+        return YES;
+	else
+		return %orig;
 } 
 - (void)setBatterySaverModeActive:(bool)arg1 {
-    arg1 = YES;
-    %orig;
+	if(ToggleLPM)
+		return YES;
+	else
+		%orig(arg1);
+	%orig;
 }
 - (bool)underMemoryPressure {
     return NO;
@@ -126,8 +133,9 @@ BOOL noBackgroundNetwork = YES;
 %ctor {
     pfs = [[HBPreferences alloc] initWithIdentifier:@"com.rango.gasolinaprefs"];
 
-    // Gasolina Preferences
+    // General
     [pfs registerBool:&enabled default:YES forKey:@"Enabled"];
+	[pfs registerBool:&ToggleLPM default:YES forKey:@"ToggleLPM"];
 
     // Custom Settings
     [pfs registerBool:&noAutoLock default:YES forKey:@"NoLPMAutoLock"];
