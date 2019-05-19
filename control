@@ -1,7 +1,7 @@
 Package: com.rango.gasolina
 Name: Gasolina
 Depends: mobilesubstrate, ws.hbang.common (>= 1.11)
-Version: 0.2
+Version: 0.3.1
 Architecture: iphoneos-arm
 Description: Saves you some battery!
 Maintainer: Rango
